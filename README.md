@@ -1,4 +1,4 @@
-# using_git_github_cat_vim
+# using_git_gitlab_cat_vim
 
 ### cat is used to read a file;usage cat file_name
 ### vi is used to modify a file and save the file using :wq at the end to save :q! to navigate out without saving
@@ -49,4 +49,20 @@ git config commit.template
 Team member
 Maintainer->perform commits * integrates pull requests * INherit contributor permissions
 Contributor-> clone repositories * Lack commit privileges * Submit pull requests
+
+sudo apt-get update
+sudo apt-get install -y curl openssh-server ca-certificates
+curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | sudo bash
+sudo EXTERNAL_URL=http://localhost:80/ apt-get install gitlab-ce
+
+Step by step:
+
+sudo -e /etc/gitlab/gitlab.rb
+Change external_url from yourdomain.com to yourdomain.com:9999
+9999 -> Port you want it to run
+sudo gitlab-ctl reconfigure
+Share
+Improve this answer
+Follow
+
 
